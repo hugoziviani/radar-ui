@@ -40,9 +40,8 @@ class CarFormComponent extends React.Component {
     const {plateVehicle: plateVehicle, modelVehicle: modelVehicle, conductorVehicle: conductorVehicle } = this.state;
     return (
       <div>
-
         <form onSubmit={this.submitHandler}>
-        <FormControl>
+        <FormControl className="styleForm">
             <InputLabel>Placa</InputLabel>
             <Input
               type="text"
@@ -53,7 +52,7 @@ class CarFormComponent extends React.Component {
               aria-describedby="helper-plateVehicle"
             />
           </FormControl>
-          <FormControl>
+          <FormControl className="styleForm">
             <InputLabel>Modelo</InputLabel>
             <Input
               type="text"
@@ -64,9 +63,9 @@ class CarFormComponent extends React.Component {
               aria-describedby="helper-modelVehicle"
             />
           </FormControl>
-          <FormControl>
+          <FormControl className="styleForm">
             <InputLabel>Condutor</InputLabel>
-            <Input              
+            <Input 
               type="text"
               value={conductorVehicle}
               onChange={this.changeHandler}
@@ -75,14 +74,13 @@ class CarFormComponent extends React.Component {
               aria-describedby="helper-conductorVehicle"
             />
           </FormControl>
-            
-
           <br></br>
           <br></br>
 
-          <Button type="submit" variant="contained" >
+          <Button type="submit" variant="contained" className="styleButton">
             Enviar
           </Button>
+          <br></br>
         </form>
       </div>
     );
